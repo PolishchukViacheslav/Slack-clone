@@ -1,11 +1,12 @@
 .sidebar {
+  flex: 0.3;
   color: white;
   background-color: var(--slack-color);
   border-top: 1px solid #49274b;
   max-width: 260px;
 }
 
-.sidebar>hr {
+.sidebar > hr {
   margin: 10px 0;
   border: 1px solid #49274b;
 }
