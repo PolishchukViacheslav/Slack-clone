@@ -5,6 +5,11 @@
   max-width: 260px;
 }
 
+.sidebar>hr {
+  margin: 10px 0;
+  border: 1px solid #49274b;
+}
+
 .sidebar__header {
   display: flex;
   border-bottom: 1px solid #49274b;
@@ -13,6 +18,26 @@
 
 .sidebar__info {
   flex: 1;
+}
+
+.sidebar__info > h2 {
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.sidebar__info > h3 {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.sidebar__info > h3 > .MuiSvgIcon-root {
+  font-size: 14px;
+  margin: 1px 2px 0 0;
+  color: green;
+
 }
 
 .sidebar__header > .MuiSvgIcon-root {

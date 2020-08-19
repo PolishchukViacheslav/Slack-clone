@@ -7,7 +7,7 @@
   color: white;
 }
 
-.header__left{
+.header__left {
   flex: 0.3;
   display: flex;
   align-items: center;

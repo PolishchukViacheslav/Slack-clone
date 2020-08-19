@@ -1,6 +1,8 @@
 {
   "name": "slack-clone",
   "version": "0.1.0",
+  "keywords": ["slack", "firebase"],
+  "author": "Polishchuk Viacheslav",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -12,11 +14,15 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
+  "devDependencies": {
+    "@mate-academy/stylelint-config": "0.0.9",
+    "stylelint": "^13.6.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint:html": "linthtml ./src",
+    "lint:css": "stylelint ./src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,11 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@linthtml/linthtml": "^0.4.2",
-    "@mate-academy/linthtml-config": "0.0.1",
-    "@mate-academy/stylelint-config": "0.0.9",
-    "stylelint": "^13.6.1"
   }
 }
