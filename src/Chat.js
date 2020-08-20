@@ -41,7 +41,7 @@ function Chat() {
       ));
 
     if (chatBottom.current) {
-      setTimeout(() => scrollChatBottom(), 200);
+      setTimeout(() => scrollChatBottom(), 500);
     }
 
   }, [roomId]);
