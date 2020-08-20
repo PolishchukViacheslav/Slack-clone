@@ -30,11 +30,17 @@
   border-radius: 6px;
 }
 
+.header__search--focused {
+  border-color: white ;
+}
+
 .header__search > input {
   background-color: transparent;
   border: none;
   text-align: center;
   min-width: 35vw;
+  color: white;
+  outline: none;
 
 }
 

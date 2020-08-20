@@ -4,7 +4,7 @@ import { useStateValue } from './StateProvider';
 import db from "./firebase";
 import firebase from "firebase";
 
-function ChatInput({ channelName, channelId }) {
+function ChatInput({ channelName, channelId, scroll }) {
   const [input, setInput] = useState('');
   const [{ user }] = useStateValue();
   console.log(input);
@@ -12,21 +12,21 @@ function ChatInput({ channelName, channelId }) {
   const sendMessage = (event) => {
     event.preventDefault();
 
-    if (channelId  && input.trim()) {
+    if (channelId && input.trim()) {
+      console.log('input', input);
       db.collection('rooms').doc(channelId).collection('messages').add({
-        message: input,
+        message: input.trim(),
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         user: user.displayName,
         userImg: user.photoURL,
       });
       setInput('');
+      setTimeout(() => scroll(), 200);
     }
   } 
 
   const handleInputChange = ({ target }) => {
-    if (target.value) {
       setInput(target.value)
-    }
   };
 
   return (
@@ -37,7 +37,6 @@ function ChatInput({ channelName, channelId }) {
           onChange={handleInputChange}
           type="text" 
           placeholder={`Message #${channelName?.toLowerCase()}`}/>
-        {/* <button type="submit" onClick={sendMessage}>Send</button> */}
       </form>
     </div>
   )
